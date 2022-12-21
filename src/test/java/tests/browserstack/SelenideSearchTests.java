@@ -1,8 +1,7 @@
-package tests.android.browserstack_sample;
+package tests.browserstack;
 
 import io.appium.java_client.AppiumBy;
 import org.junit.jupiter.api.Test;
-import tests.TestBase;
 
 import static com.codeborne.selenide.CollectionCondition.sizeGreaterThan;
 import static com.codeborne.selenide.Selenide.*;
