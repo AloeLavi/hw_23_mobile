@@ -1,8 +1,12 @@
 package config;
 import org.aeonbits.owner.Config;
 
-//public class BrowserstackConfig extends Config {
-/*
+@Config.Sources({
+        "classpath:${env}.properties"
+
+})
+public interface BrowserstackConfig extends Config {
+
 
     @Key("user")
     String user();
@@ -12,8 +16,10 @@ import org.aeonbits.owner.Config;
 
     @Key("app")
     String app();
+    @Key ("remoteUrl")
+    String remoteUrl();
 
-    @Key("device")
+   /* @Key("device")
     String device();
 
     @Key ("osVersion")
@@ -28,7 +34,6 @@ import org.aeonbits.owner.Config;
     @Key("name")
     String name();
 
-    @Key ("baseUrl")
-    String baseUrl(); */
+    */
 
-//}
+}
