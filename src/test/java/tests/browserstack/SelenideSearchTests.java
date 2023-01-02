@@ -13,7 +13,7 @@ public class SelenideSearchTests extends TestBase {
     @Test
     void successSearchTest() {
         back();
-        step("Нажать на Search Wikipedia"), () -> {
+        step("Нажать на Search Wikipedia", () -> {
              $(AppiumBy.accessibilityId("Search Wikipedia")).click();
         });
         step("Ввести Twin Peaks", () -> {
