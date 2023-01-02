@@ -22,6 +22,7 @@ public class SelenideSearchTests extends TestBase {
         });
         step("Открыть статью Twin Peaks", () -> {
             $(AppiumBy.id("org.wikipedia.alpha:id/page_list_item_title")).click();
+            $(AppiumBy.className("android.view.View")).click();
             $(AppiumBy.className("android.widget.TextView")).shouldHave(text("Twin Peaks"));
         });
     }
