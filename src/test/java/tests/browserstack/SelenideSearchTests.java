@@ -13,14 +13,14 @@ public class SelenideSearchTests extends TestBase {
     @Test
     void successSearchTest() {
         back();
-        step("Нажать на 'Search Wikipedia'"), () -> {
+        step("Нажать на Search Wikipedia"), () -> {
              $(AppiumBy.accessibilityId("Search Wikipedia")).click();
         });
-        step("Ввести 'Twin Peaks'", () -> {
+        step("Ввести Twin Peaks", () -> {
              $(AppiumBy.id("org.wikipedia.alpha:id/search_src_text")).sendKeys("Twin Peaks");
              $$(AppiumBy.id("org.wikipedia.alpha:id/page_list_item_title")).shouldHave(sizeGreaterThan(0));
         });
-        step("Открыть статью 'Twin Peaks'", () -> {
+        step("Открыть статью Twin Peaks", () -> {
             $(AppiumBy.id("org.wikipedia.alpha:id/page_list_item_title")).click();
             $(AppiumBy.className("android.widget.TextView")).shouldHave(text("Twin Peaks"));
         });
