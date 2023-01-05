@@ -11,7 +11,7 @@ import static io.qameta.allure.Allure.step;
 public class SelenideSearchTests extends TestBase {
 
     @Test
-    void successSearchTest() {
+    void searchArticleTest() {
         back();
         step("Нажать на Search Wikipedia", () -> {
              $(AppiumBy.accessibilityId("Search Wikipedia")).click();
